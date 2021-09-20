@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alien.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @alien.age %>
+</p>
+
+<p>
+  <strong>Planet:</strong>
+  <%= @alien.planet.name %>
+</p>
+
+<p>
+  <strong>Power:</strong>
+  <%= @alien.powers.name %>
+</p>
+
+<%= link_to 'Edit', edit_alien_path(@alien) %> |
+<%= link_to 'Back', aliens_path %>
