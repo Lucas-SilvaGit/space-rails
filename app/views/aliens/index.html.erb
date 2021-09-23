@@ -1,52 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<p id="notice"><%= notice %></p>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<h1>Aliens</h1>
 
-    <title>Aliens</title>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Planet</th>
+      <th>Power</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-    <!--<p id="notice"><%= notice %></p>-->
-    
-  </head>
+  <tbody>
+    <% @aliens.each do |alien| %>
+      <tr>
+        <td><%= alien.name %></td>
+        <td><%= alien.age %></td>
+        <td><%= alien.planet.name %></td>
+        <td><%= alien.powers.name %></td>
+        <td><%= link_to 'Show', alien %></td>
+        <td><%= link_to 'Edit', edit_alien_path(alien) %></td>
+        <td><%= link_to 'Destroy', alien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  <body>
-    <!-- <p id="notice"><%= notice %></p>-->
-    <h1>Aliens</h1>
+<br>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Planet</th>
-          <th>Power</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
+<%= link_to 'New Alien', new_alien_path %>
 
-    <tbody>
-      <% @aliens.each do |alien| %>
-        <tr>
-          <td><%= alien.name %></td>
-          <td><%= alien.age %></td>
-          <td><%= alien.planet.name %></td>
-          <td><%= alien.powers.name %></td>
-          <td><%= link_to 'Ver', alien %></td>
-          <td><%= link_to 'Editar', edit_alien_path(alien) %></td>
-          <td><%= link_to 'Deletar', alien, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-    <br>
-
-    <%= link_to 'Novo Alien', new_alien_path %>
-
-  </body>
-</html>
