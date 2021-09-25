@@ -2,8 +2,9 @@
 
 <h1>Aliens</h1>
 
-<table>
-  <thead>
+<div class="table-responsive">
+<table class= "table table-bordered border-dark">
+  <thead class="table-dark">
     <tr>
       <th>Name</th>
       <th>Age</th>
@@ -19,7 +20,7 @@
         <td><%= alien.name %></td>
         <td><%= alien.age %></td>
         <td><%= alien.planet.name %></td>
-        <td><%= alien.powers.name %></td>
+        <td><%= alien.powers.pluck(:name).join(",")  %></td>
         <td><%= link_to 'Show', alien %></td>
         <td><%= link_to 'Edit', edit_alien_path(alien) %></td>
         <td><%= link_to 'Destroy', alien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,6 +28,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
