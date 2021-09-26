@@ -1,6 +1,14 @@
-<h1>Editing Alien</h1>
+<div class="container">
+    <div class="row align-items-center">
+        <h1 class="text-center">Editing Alien</h1>
 
-<%= render 'form', alien: @alien %>
+        <div class="btn btn-secondary">
+            <%= render 'form', alien: @alien %>
+        </div>
 
-<%= link_to 'Show', @alien %> |
-<%= link_to 'Back', aliens_path %>
+    </div>
+
+        <button type="button" class="btn btn-dark "><%= link_to 'Show', @alien %></button>
+        <button type="button" class="btn btn-dark "><%= link_to 'Back', aliens_path %></button>
+    
+</div>
