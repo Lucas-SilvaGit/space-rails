@@ -1,5 +1,12 @@
-<h1>New Planet</h1>
+<div class="container">
+    <div class="row align-items-center">
 
-<%= render 'form', planet: @planet %>
+        <h1 class="text-center">New Planet</h1>
 
-<%= link_to 'Back', planets_path %>
+        <div class= "btn btn-secondary">
+            <%= render 'form', planet: @planet %>
+        </div>
+
+        <button type="button" class="btn btn-dark "><%= link_to 'Back', planets_path %></button>
+    </div>
+</div>
