@@ -1,5 +1,11 @@
-<h1>New Power</h1>
+<div class="container">
+    <div class="row align-items-center">
+        <h1 class="text-center">New Power</h1>
 
-<%= render 'form', power: @power %>
+        <div class="btn btn-secondary">
+            <%= render 'form', power: @power %>
+        </div>
 
-<%= link_to 'Back', powers_path %>
+        <button type="button" class="btn btn-dark "><%= link_to 'Back', powers_path %></button>
+    </div>
+</div>
