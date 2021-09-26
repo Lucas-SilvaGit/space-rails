@@ -1,6 +1,14 @@
-<h1>Editing Power</h1>
+<div class="container">
+    <div class="row align-items-center">
+        <h1 class="text-center">Editing Power</h1>
 
-<%= render 'form', power: @power %>
+        <div class="btn btn-secondary">
+            <%= render 'form', power: @power %>
+        </div>
 
-<%= link_to 'Show', @power %> |
-<%= link_to 'Back', powers_path %>
+    </div>
+        <button type="button" class="btn btn-dark "><%= link_to 'Show', @power %></button>
+        <button type="button" class="btn btn-dark "><%= link_to 'Back', powers_path %></button>
+
+    
+</div>
