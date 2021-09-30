@@ -3,7 +3,7 @@ class AliensController < ApplicationController
 
   # GET /aliens or /aliens.json
   def index
-    @aliens = Alien.all
+    @aliens = Alien.all #page params[:page]
   end
 
   # GET /aliens/1 or /aliens/1.json
