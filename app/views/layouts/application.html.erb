@@ -11,24 +11,30 @@
     
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Space Aliens</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <body class="container-fluid">
+	  <div class="row">
+		  <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+          <a class="navbar-brand px-3" href="#">Space Aliens</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="http://localhost:3000/aliens">Aliens</a>
-          <a class="nav-link" href="http://localhost:3000/planets">Planets</a>
-          <a class="nav-link" href="http://localhost:3000/powers">Powers</a>
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="http://localhost:3000/aliens">Aliens</a>
+            <a class="nav-link" href="http://localhost:3000/planets">Planets</a>
+            <a class="nav-link" href="http://localhost:3000/powers">Powers</a>
+          </div>
         </div>
+        </nav>
+        
+        <div class="container-fluid">
+        <%= yield %>
         </div>
+
       </div>
-    </nav>
-    
-    <%= yield %>
+    </div>
   </body>
 </html>
