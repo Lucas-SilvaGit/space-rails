@@ -1,12 +1,10 @@
-<
-    <div class="row align-items-center">
-        <h1 class="text-center">Editing Planet</h1>
+<div class="row align-items-center">
+    <h1 class="text-center">Editing Planet</h1>
 
-        <div class="btn btn-secondary">
-            <%= render 'form', planet: @planet %>
-        </div>
+    <div class="btn btn-secondary">
+        <%= render 'form', planet: @planet %>
+    </div>
+</div>
         
-        </div>
-        
-        <button type="button" class="btn btn-dark "><%= link_to 'Show', @planet %></button>
-        <button type="button" class="btn btn-dark "><%= link_to 'Back', planets_path %></button>
+<button type="button" class="btn btn-dark "><%= link_to 'Show', @planet %></button>
+<button type="button" class="btn btn-dark "><%= link_to 'Back', planets_path %></button>
