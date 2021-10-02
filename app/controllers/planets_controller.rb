@@ -3,7 +3,7 @@ class PlanetsController < ApplicationController
 
   # GET /planets or /planets.json
   def index
-    @planets = Planet.all
+    @planets = Planet.all.page(params[:page])
   end
 
   # GET /planets/1 or /planets/1.json
