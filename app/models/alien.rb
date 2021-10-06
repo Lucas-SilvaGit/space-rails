@@ -5,4 +5,6 @@ class Alien < ApplicationRecord
     has_many :powers, through: :alien_powers
 
     validates_presence_of :name
+
+    paginates_per 10
 end
