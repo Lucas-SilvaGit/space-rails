@@ -3,7 +3,7 @@ class PowersController < ApplicationController
 
   # GET /powers or /powers.json
   def index
-    @powers = Power.all.page(params[:page])
+    @powers = Power.all
   end
 
   # GET /powers/1 or /powers/1.json
