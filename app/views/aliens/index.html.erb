@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+<div class="container-fluid p-4">
   <div class="card shadow bg-white rounded">
     <div class="card-header d-flex bd-highlight">
       <div class="me-auto pt-1 pb-0 bd-highlight"><h3>Aliens</h3></div>
-      <div class="pt-1 pb-0 bd-highlight"><%= link_to 'Novo',new_alien_path, class: "btn btn-info ps-4 pe-4 pt-1 pb-1 text-white"%></div>
+      <div class="pt-1 pb-0 bd-highlight">
+        <%= link_to 'Novo',new_alien_path, class: "btn btn-info ps-4 pe-4 pt-1 pb-1 text-white"%>
+      </div>
     </div>
 
     <div class="card-body px-3">
@@ -25,14 +27,16 @@
               <td><%= alien.name %></td>
               <td><%= alien.age %></td>
               <td><%= alien.planet.name %></td>
-              <td><%= link_to 'Editar', edit_alien_path(alien), class: "btn btn-warning mr-3 ps-3 pe-3 pt-0 pb-0"%></td>
-              <td><%= link_to 'Deletar', alien, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-danger ps-2 pe-2 pt-0 pb-0"%></td>
+              <td>
+                <%= link_to 'Delete', alien, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-sm btn-danger p-0 rounded-3 w-25"%>
+                <%= link_to 'Edit', edit_alien_path(alien), class: "btn btn-sm btn-warning p-0 rounded-3 w-25"%>
+              </td>
             </tr>
             <% end %>
           </tbody>
         </table>
       </div>
-      <%= paginate @aliens%>
+      <%= paginate @aliens %>
     </div>  
   </div>
 </div>
