@@ -28,7 +28,7 @@
               <td><%= alien.age %></td>
               <td><%= alien.planet.name %></td>            
               <td class="d-flex gap-2 justify-content-end">
-                <%= link_to t("actions.delete"), alien, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger px-3 py-0 rounded-3 w-20"%>
+                <%= link_to t("actions.delete"), alien, method: :delete, data: { confirm: t("actions.confirm")}, class: "btn btn-sm btn-danger px-3 py-0 rounded-3 w-20"%>
                 <%= link_to t("actions.edit"), edit_alien_path(alien), class: "btn btn-sm btn-warning px-4 py-0 rounded-3 w-23"%>
               </td>
             </tr>
