@@ -17,7 +17,7 @@
               <th>Alien</th>
               <th>Age</th>
               <th>Planet</th>
-              <th class="ps-5 pe-5 d-flex gap-1 justify-content-end"  colspan="3">Actions</th>
+              <th class="pe-5 text-end" colspan="3">Actions</th>
             </tr>
           </thead>
 
@@ -27,7 +27,7 @@
               <td><%= alien.name %></td>
               <td><%= alien.age %></td>
               <td><%= alien.planet.name %></td>            
-              <td class="d-flex gap-2 justify-content-end">
+              <td class="text-end">
                 <%= link_to t("actions.delete"), alien, method: :delete, data: { confirm: t("actions.confirm")}, class: "btn btn-sm btn-danger px-3 py-0 rounded-3 w-20"%>
                 <%= link_to t("actions.edit"), edit_alien_path(alien), class: "btn btn-sm btn-warning px-4 py-0 rounded-3 w-23"%>
               </td>
