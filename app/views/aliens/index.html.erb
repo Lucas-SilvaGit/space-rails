@@ -1,23 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<!--aqui>
+<-->
 <div class="pt-5">
   <div class="card shadow bg-white rounded">
     <div class="card-header d-flex">
       <div class="me-auto pt-2 pb-0"><h6>Aliens</h6></div>
       <div class="pt-1 pb-0 bd-highlight">
-        <%= link_to t("actions.new"),new_alien_path, class: "btn btn-info px-4 py-1 text-white"%>
+        <%= link_to t("actions.new"),new_alien_path, class: "btn btn-primary px-4 py-1 text-white"%>
       </div>
     </div>
 
     <div class="card-body px-5 my-3">
       <div class="bd-highlight">
-        <table class= "table table-striped">
-          <thead class="table-light">
+        <table class= "table table-striped border-top">
+          <thead>
             <tr>
-              <th>Alien</th>
-              <th>Age</th>
-              <th>Planet</th>
-              <th class="pe-5 text-end" colspan="3">Actions</th>
+              <th class="col-4">Alien</th>
+              <th class="col-3">Age</th>
+              <th class="col-3">Planet</th>
+              <th class="col-2 text-center ps-5" colspan="3">Actions</th>
             </tr>
           </thead>
 
