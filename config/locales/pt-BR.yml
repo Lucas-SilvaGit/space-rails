@@ -1,0 +1,17 @@
+pt-BR:
+  actions:
+    show: Exibir
+    edit: Editar
+    destroy: Excluir
+    new: Novo
+    back: Voltar
+    delete: Deletar
+    confirm: Você tem certeza?
+
+  views:
+    pagination:
+      next: Proximo
+      last: Ultimo
+      previous: Anterior
+      first: Primeiro
+      

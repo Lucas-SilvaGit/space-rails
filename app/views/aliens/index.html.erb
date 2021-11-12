@@ -1,33 +1,43 @@
 <p id="notice"><%= notice %></p>
+<!--aqui>
+<-->
+<div class="pt-5">
+  <div class="card shadow bg-white rounded">
+    <div class="card-header d-flex">
+      <div class="me-auto pt-2 pb-0"><h6>Aliens</h6></div>
+      <div class="pt-1 pb-0 bd-highlight">
+        <%= link_to t("actions.new"),new_alien_path, class: "btn btn-primary px-4 py-1 text-white"%>
+      </div>
+    </div>
 
-<h1>Aliens</h1>
+    <div class="card-body px-5 my-3">
+      <div class="bd-highlight">
+        <table class= "table table-striped border-top">
+          <thead>
+            <tr>
+              <th class="col-4">Alien</th>
+              <th class="col-3">Age</th>
+              <th class="col-3">Planet</th>
+              <th class="col-2 text-center ps-5" colspan="3">Actions</th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Planet</th>
-      <th>Power</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @aliens.each do |alien| %>
-      <tr>
-        <td><%= alien.name %></td>
-        <td><%= alien.age %></td>
-        <td><%= alien.planet.name %></td>
-        <td><%= alien.powers.name %></td>
-        <td><%= link_to 'Show', alien %></td>
-        <td><%= link_to 'Edit', edit_alien_path(alien) %></td>
-        <td><%= link_to 'Destroy', alien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Alien', new_alien_path %>
+          <tbody>
+            <% @aliens.each do |alien| %>
+            <tr>
+              <td><%= alien.name %></td>
+              <td><%= alien.age %></td>
+              <td><%= alien.planet.name %></td>            
+              <td class="text-end">
+                <%= link_to t("actions.delete"), alien, method: :delete, data: { confirm: t("actions.confirm")}, class: "btn btn-sm btn-danger px-3 py-0 rounded-3 w-20"%>
+                <%= link_to t("actions.edit"), edit_alien_path(alien), class: "btn btn-sm btn-warning px-4 py-0 rounded-3 w-23"%>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <%= paginate @aliens %>
+    </div>  
+  </div>
+</div>
